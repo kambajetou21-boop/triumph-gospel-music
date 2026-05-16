@@ -1,0 +1,20 @@
+{
+  "name": "triumph-music-label",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0",
+    "@netlify/database": "^0.6.0",
+    "@netlify/identity": "^1.1.0",
+    "drizzle-orm": "beta",
+    "stripe": "^17.7.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "beta",
+    "vite": "^6.4.2"
+  }
+}

@@ -1,39 +1,28 @@
-functionsDirectory = "/opt/build/repo/netlify/functions"
-functionsDirectoryOrigin = "default"
+functionsDirectory = "netlify/functions"
 plugins = []
 headers = []
-redirects = []
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {}
+  force = false
 
 [build]
-publish = "/opt/build/repo/dist/client"
-publishOrigin = "config"
-commandOrigin = "config"
-command = "vite build"
-functions = "/opt/build/repo/netlify/functions"
-
-  [build.environment]
-
-  [build.processing]
-
-    [build.processing.css]
-
-    [build.processing.html]
-
-    [build.processing.images]
-
-    [build.processing.js]
-
-  [build.services]
+  publish = "dist"
+  command = "vite build"
+  functions = "netlify/functions"
 
 [database]
 
   [database.migrations]
-  path = "/opt/build/repo/netlify/database/migrations"
+    path = "netlify/database/migrations"
 
 [dev]
-command = "npm run dev"
-targetPort = 3000
-port = 8888
+  command = "npm run dev"
+  targetPort = 3000
+  port = 8888
 
 [functions]
 

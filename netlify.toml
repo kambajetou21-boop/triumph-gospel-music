@@ -1,15 +1,15 @@
-functionsDirectory = "/opt/build/repo/netlify/functions"
+functionsDirectory = "netlify/functions"
 functionsDirectoryOrigin = "default"
 plugins = []
 headers = []
 redirects = []
 
 [build]
-publish = "/opt/build/repo/dist/client"
+publish = "dist"
 publishOrigin = "config"
 commandOrigin = "config"
-command = "vite build"
-functions = "/opt/build/repo/netlify/functions"
+command = "echo 'Static site - no build needed'"
+functions = "netlify/functions"
 
   [build.environment]
 
@@ -28,7 +28,7 @@ functions = "/opt/build/repo/netlify/functions"
 [database]
 
   [database.migrations]
-  path = "/opt/build/repo/netlify/database/migrations"
+  path = "netlify/database/migrations"
 
 [dev]
 command = "npm run dev"

@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS subscriptions (
+  id SERIAL PRIMARY KEY,
+  identity_id TEXT NOT NULL UNIQUE,
+  email TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'active',
+  plan TEXT NOT NULL DEFAULT 'premium',
+  amount INTEGER NOT NULL DEFAULT 499,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
